@@ -21,6 +21,8 @@ spec:
       serviceAccountName: pipeline
       pipelineRef:
         name: build-and-deploy
+      podTemplate:
+        runtimeClassName: kata
       params:
       - name: deployment-name
         value: $(tt.params.git-repo-name)
